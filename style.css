@@ -1,0 +1,424 @@
+@import url("https://api.fontshare.com/v2/css?f[]=clash-display@500&display=swap");
+
+:root {
+  --backgroundPosition: 0%
+}
+
+html {
+  cursor: none;
+  background-color: black;
+}
+
+.cursor {
+  position: fixed;
+  mix-blend-mode: difference;
+  aspect-ratio: 1/1;
+  border-radius: 100%;
+  pointer-events: none;
+  z-index: 100;
+}
+
+.smallBall {
+  width: 15px;
+  background-color: white;
+  transition: opacity .5s;
+}
+
+.bigBall {
+  width: 68px;
+  border: 2px white solid;
+  transition: background-color .5s;
+  display: flex;
+  justify-content: center;
+  align-items: start;
+}
+
+.smallBall.hovering {
+  opacity: 0;
+}
+
+.bigBall.hovering {
+  background-color: white;
+}
+
+.cursorClickText {
+  opacity: 0;
+  mix-blend-mode: difference;
+  transform: translateY(-5px);
+  transition: all .5s;
+}
+
+.cursorClickText.hovering {
+  transform: translateY(-25px);
+  opacity: 1;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  font-family: 'Clash Display', sans-serif;
+}
+
+.reveal {
+  transform: translateY(200px);
+  opacity: 0;
+  transition: all 2s;
+}
+
+.reveal.active {
+  transform: translate(0);
+  opacity: 1;
+}
+
+.navbar {
+  background-color: #000;
+  position: fixed;
+  border-bottom: 3px solid white;
+  width: calc(90vw - 20px);
+  height: 80px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 3vw;
+  margin-left: 5vw;
+  padding: 10px;
+  z-index: 99;
+}
+
+.navbar span {
+  font-size: 30px;
+}
+
+.hero {
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 15%;
+}
+
+.hoverable {
+  transition: letter-spacing .5s;
+}
+
+.hoverable:hover {
+  letter-spacing: 3px;
+}
+
+span {
+  color: white;
+}
+
+.heroTextDiv {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  width: 90vw;
+  height: 60vh;
+  margin-top: -5vh;
+}
+
+.title {
+  stroke: 5px;
+  background-clip: text;
+  font-size: 110px;
+  height: 45%;
+  width: 100%;
+  border-bottom: 3px white solid;
+  display: flex;
+  justify-content: start;
+  align-items: end;
+  position: relative;
+  padding: 2%;
+  padding-bottom: 3%;
+  box-sizing: border-box;
+}
+
+.title p {
+  animation: startTextAnim 2s both;
+  z-index: -1;
+}
+
+@keyframes startTextAnim {
+  from {
+    opacity: 0;
+    transform: translateY(100px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0px);
+  }
+}
+
+.scroll {
+  mix-blend-mode: difference;
+  width: 15vw;
+  aspect-ratio: 1/1;
+  border-radius: 100%;
+  position: absolute;
+  top: calc(100vh - 15vw / 2);
+  animation: rotate 10s linear infinite both;
+}
+
+.svgScroll {
+  display: block;
+  margin: auto;
+  text-align: center;
+}
+
+@keyframes rotate {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.circle {
+  transform-origin: center;
+}
+
+.svgScroll text {
+  font-size: 40px;
+  mix-blend-mode: difference;
+  fill: white;
+}
+
+.scrollIcon {
+  position: absolute;
+  width: 10vw;
+  aspect-ratio: 1/1;
+  border-radius: 100%;
+  top: calc(100vh - 10vw / 2);
+}
+
+.arrow {
+  margin-top: 15%;
+  margin-left: calc(75% / 2);
+  width: 25%;
+  animation: identifier 2.5s infinite both ease;
+  transition: all .5s;
+}
+
+@keyframes identifier {
+  0%, 70%, 100% {
+    margin-top: 15%;
+  }
+  50% {
+    margin-top: 30%;
+  }
+}
+
+.getAfter::after {
+  content: "web";
+  animation: changeTextAnimation 5s infinite linear;
+  background: linear-gradient(60deg, #9269f1, #7444e5, #6025e8, #300c83, #6025e8, #7444e5, #9269f1);
+  background-size: 400%;
+  -webkit-text-fill-color: transparent;
+  -webkit-background-clip: text;
+  animation: textBackgroundAnim 20s 5s infinite linear;
+  animation: textAnimation 5s 2.5s infinite ease-in-out;
+}
+
+@keyframes textBackgroundAnim {
+  from {
+    background-position: 0%;
+  }
+  to {
+    background-position: 400%;
+  }
+}
+@keyframes textAnimation {
+  0% {
+    content: "web";
+  }
+  20% {
+    content: "we";
+  }
+  22.5% {
+    content: "w";
+  }
+  25% {
+    content: "";
+  }
+  30% {
+    content: "s";
+  }
+  35% {
+    content: "sw";
+  }
+  40% {
+    content: "swi";
+  }
+  45% {
+    content: "swif";
+  }
+  50% {
+    content: "swift";
+  }
+  65% {
+    content: "swif";
+  }
+  70% {
+    content: "swi";
+  }
+  75% {
+    content: "sw";
+  }
+  80% {
+    content: "s";
+  }
+  85% {
+    content: "";
+  }
+  90% {
+    content: "w";
+  }
+  100% {
+    content: "we";
+  }
+}
+
+.hiding {
+  background-color: black;
+  width: 400px;
+  height: 100px;
+  z-index: 0;
+  position: absolute;
+  left: calc(50vw - 200px);
+  top: 100vh;
+}
+
+.projects {
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 30vh;
+}
+
+.projects span {
+  font-size: 30px;
+  line-height: 70px;
+}
+
+.project {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.projectImage {
+  margin-top: 75px;
+  transition: transform .5s cubic-bezier(0.03, 0.98, 0.52, .99);
+  width: 70vw;
+  aspect-ratio: 3/1;
+  border-radius: 20px;
+  padding: 2%;
+  box-sizing: border-box;
+  position: relative;
+  transform-style: preserve-3d;
+  transform: perspective(1000px);
+  box-shadow: inset 20px 20px 20px 0px rgba(255, 255, 255, .25), inset -20px -20px 20px 0px rgba(0, 0, 0, .25);
+  background-position-y: var(--backgroundPosition);
+}
+
+.project1 .projectImage {
+  background-image: url(./dotx.png);
+  background-size: 100%;
+}
+
+.projectImage {
+  -webkit-filter: grayscale(75%);
+  transition: -webkit-filter .5s;
+}
+
+.projectImage:hover {
+  -webkit-filter: none;
+  animation: animBackground 5s linear both;
+}
+
+@keyframes animBackground {
+  from {
+    background-position-y: var(--backgroundPosition);
+  }
+  to {
+    background-position-y: bottom;
+  }
+}
+
+.project2 .projectImage {
+  background-image: url(./styled.png);
+  background-size: 100%;
+}
+
+.About {
+  margin-left: 10%;
+  width: 80%;
+  border-top: 3px white solid;
+  padding-top: 7%;
+  padding-bottom: 7%;
+  box-sizing: border-box;
+}
+
+.About span {
+  font-size: 30px;
+}
+
+.Contact {
+  width: 80vw;
+  margin-left: 10vw;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 5%;
+  box-sizing: border-box;
+  gap: 2%;
+  border-top: white 3px solid;
+}
+
+.Contact span {
+  font-size: 30px;
+  margin-bottom: 2.5vh;
+}
+
+.containerSocialLinks {
+  display: flex;
+  width: 100% !important;
+  justify-content: center;
+  gap: 2%;
+  background-color: transparent !important;
+}
+
+.Contact div:nth-child(n + 1) {
+  background-color: white;
+  width: 50px;
+  height: 50px;
+  border-radius: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.Contact div:nth-child(n + 1) img {
+  object-fit: cover;
+  width: 50%;
+  aspect-ratio: 1/1;
+  filter: grayscale(100%);
+  -webkit-filter: grayscale(100%);
+  transition: all .5s;
+  cursor: none;
+}
+
+.Contact div:nth-child(n + 1) img:hover {
+  object-fit: cover;
+  width: 55%;
+  aspect-ratio: 1/1;
+  filter: grayscale(100%);
+  -webkit-filter: grayscale(100%);
+}

@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <title>Yudjen | Creative Coder and Web Developper</title>
+    <!-- <link rel="icon" href=""> -->
+    <link rel="stylesheet" href="style.css">
+  </head>
+  <body>
+    <div class="content">
+      <div class="navbar">
+        <span class="hoverable" onclick="
+          window.scroll({
+            top: window.innerHeight - 80,
+            left: 0,
+            behavior: 'smooth'
+          });">My Projects</span>
+        <span class="hoverable" onclick="
+        window.scroll({
+          top: 2 * window.innerHeight + 80,
+          left: 0,
+          behavior: 'smooth'
+        });">About</span>
+        <span class="hoverable" onclick="
+        window.scroll({
+          top: 2 * window.innerHeight + 80,
+          left: 0,
+          behavior: 'smooth'
+        });">Contact</span>
+      </div>
+      <div class="hero">
+        <div class="heroTextDiv">
+          <span class="title"><p>Y</p><p>u</p><p>d</p><p>j</p><p>e</p><p>n,</p><p>&nbsp;</p><p>C</p><p>r</p><p>e</p><p>a</p><p>t</p><p>i</p><p>v</p><p>e</p><p>&nbsp;</p><p>C</p><p>o</p><p>d</p><p>e</p><p>r</p></span>
+          <span class="title"><p class="getAfter">and&nbsp;</p><p>&nbsp;Developper</p></span>
+        </div>
+        <div class="scroll">
+          <svg class="svgScroll" viewBox="0 0 500 500">
+            <circle id="curve" class="circle" cx="50%" cy="50%" r="170"></circle>
+            <text class="textContainer" width="500">
+              <textPath href="#curve">Scroll to see more!</textPath>
+            </text>
+          </svg>
+        </div>
+        <div class="scrollIcon">
+          <img class="arrow" src="./arrow.png"></img>
+        </div>
+      </div>
+      <div class="projects">
+        <div class="hiding"></div>
+        <div class="project project1 reveal">
+          <div class="projectImage hoverable"></div>
+          <span>developper and co-founder of dotx.shop</span>
+        </div>
+        <div class="project project2 reveal">
+          <div class="projectImage hoverable"></div>
+          <span>developper of style-d.paris (still in developpment)</span>
+        </div>
+      </div>
+      <div class="About">
+        <span>My name is Yudjen, I'm a web/swift developper trying to be creative at each project I make. Even if I've got a better mastery of front-end developpment, I've already had experiences with back-end and data base handling.</span>
+      </div>
+      <div class="Contact">
+        <span>follow me here:</span>
+        <div class="containerSocialLinks">
+          <a href="https://twitter.com/home" target="_blank"><div class="x hoverable"><img src="xLogo.png"></img></div></a>
+          <a href="https://www.instagram.com/yudjen.r/" target="_blank"><div class="insta hoverable"><img src="instaLogo.png"></div></a>
+          <a href="https://github.com/Yudjenn" target="_blank"><div class="github hoverable"><img src="gitLogo.png"></div></a>
+          <a href="https://twitter.com/dotX_official" target="_blank"><div class="dotxTwitter hoverable"><img src="xLogo.png"></div></a>
+          <a href="https://www.instagram.com/dotx_official/" target="_blank"><div class="dotxInsta hoverable"><img src="instaLogo.png"></div></a>
+        </div>
+      </div>
+    </div>
+    <div class="cursor bigBall">
+      <span class="cursorClickText">click me!</span>
+    </div>
+    <div class="cursor smallBall"></div>
+    <script type="text/javascript" src="main.js"></script>
+  </body>
+</html>
