@@ -220,6 +220,7 @@ span {
   background-size: 400%;
   -webkit-text-fill-color: transparent;
   -webkit-background-clip: text;
+  background-clip: text;
   animation: textBackgroundAnim 20s 5s infinite linear;
   animation: textAnimation 5s 2.5s infinite ease-in-out;
 }
@@ -335,11 +336,13 @@ span {
 
 .projectImage {
   -webkit-filter: grayscale(75%);
+  filter: grayscale(75%);
   transition: -webkit-filter .5s;
 }
 
 .projectImage:hover {
   -webkit-filter: none;
+  filter: none;
   animation: animBackground 5s linear both;
 }
 
